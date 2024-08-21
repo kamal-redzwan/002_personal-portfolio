@@ -1,0 +1,19 @@
+---
+import Social from './Social.astro';
+
+const platform = 'github';
+const username = 'kamal-redzwan';
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  <Social platform='Twitter' username='kamalredzwan' />
+  <Social platform='Github' username='kamal-redzwan' />
+</footer>

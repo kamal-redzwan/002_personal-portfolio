@@ -10,6 +10,12 @@ const { pageTitle } = Astro.props;
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link
+      rel='stylesheet'
+      as='style'
+      crossorigin
+      href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-std.min.css'
+    />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>{pageTitle}</title>
@@ -17,11 +23,6 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
     <slot />
-    <Footer />
-    <script>
-      import '../scripts/menu.js';
-    </script>
   </body>
 </html>

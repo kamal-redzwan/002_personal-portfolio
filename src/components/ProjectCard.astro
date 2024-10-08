@@ -1,11 +1,12 @@
 ---
-
+const { projectNumber, projectName, description } = Astro.props;
 ---
 
 <div>
   <a href='#'>
-    <h2>#001</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h2>{projectNumber}</h2>
+    <h3>{projectName}</h3>
+    <p>{description}</p>
   </a>
 </div>
 
@@ -21,8 +22,14 @@
 
   h2 {
     font-size: 1rem;
+    text-decoration: underline dotted var(--txt-clr);
   }
+
+  h3 {
+    font-size: 1rem;
+  }
+
   p {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 </style>

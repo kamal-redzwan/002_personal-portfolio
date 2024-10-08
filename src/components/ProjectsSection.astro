@@ -1,0 +1,27 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<section>
+  <h1>Projects</h1>
+  <div>
+    <ProjectCard />
+    <ProjectCard />
+    <ProjectCard />
+  </div>
+</section>
+
+<style>
+  h1 {
+    font-size: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 1.25rem;
+  }
+</style>

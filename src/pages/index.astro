@@ -1,8 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
+import AboutMeSection from '../components/AboutMeSection.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
 
 const pageTitle = 'Home Page';
 ---
 
-<BaseLayout pageTitle={pageTitle} />
+<BaseLayout pageTitle={pageTitle}>
+  <AboutMeSection />
+  <ProjectsSection />
+</BaseLayout>

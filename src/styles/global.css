@@ -3,6 +3,7 @@
 :root {
   --bg: #1a1a1a;
   --txt-clr: #f2f2f2;
+  --txt-clr-dim: #505050;
   --page-width: 67rem;
   --page-padding-top: 6rem;
   --hover-clr: #f2f2f299;

@@ -3,33 +3,36 @@ const { projectNumber, projectName, description } = Astro.props;
 ---
 
 <div>
-  <a href='#'>
-    <h2>{projectNumber}</h2>
-    <h3>{projectName}</h3>
+  <div>
+    <a href='#'>
+      <h3>{projectNumber}</h3>
+    </a>
+    <h4>{projectName}</h4>
     <p>{description}</p>
-  </a>
+  </div>
 </div>
 
 <style>
-  div {
-    margin-top: 1rem;
-  }
-
   a {
+    margin-top: 1rem;
     text-decoration: none;
-    color: inherit;
-  }
-
-  h2 {
-    font-size: 1rem;
-    text-decoration: underline dotted var(--txt-clr);
   }
 
   h3 {
+    color: var(--txt-clr);
+    font-size: 1rem;
+    text-decoration: underline;
+    text-decoration-color: var(--txt-clr-dim);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3.5px;
+  }
+
+  h4 {
     font-size: 1rem;
   }
 
   p {
     margin-top: 0.5rem;
+    opacity: 60%;
   }
 </style>

@@ -2,4 +2,33 @@
 const { title, url } = Astro.props;
 ---
 
-<li><a href={url}>{title}</a></li>
+<div>
+  <a href={url}>
+    <h3>{title}</h3>
+  </a>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptatum
+    commodi placeat tempora, corporis recusandae!
+  </p>
+</div>
+
+<style>
+  a {
+    margin-top: 1rem;
+    text-decoration: none;
+  }
+
+  div {
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    color: var(--txt-clr);
+  }
+
+  p {
+    margin-top: 0.5rem;
+    opacity: 60%;
+  }
+</style>

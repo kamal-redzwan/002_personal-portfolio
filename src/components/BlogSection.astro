@@ -3,14 +3,24 @@ import BlogPost from './BlogPost.astro';
 
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection('posts');
+
+// Get the latest 3 post
+const MAX_POST = -3;
 ---
 
 <section>
-  <h2>Blogs</h2>
+  <h2>Latest Blogs</h2>
   {
-    allPosts.map((post) => (
-      <BlogPost url={`/posts/${post.slug}`} title={`${post.data.title}`} />
-    ))
+    allPosts
+      .slice(MAX_POST)
+      .map((post) => (
+        <BlogPost
+          url={`/posts/${post.slug}`}
+          title={`${post.data.title}`}
+          description={`${post.data.description}`}
+        />
+      ))
+      .reverse()
   }
 </section>
 

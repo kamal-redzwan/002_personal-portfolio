@@ -10,12 +10,25 @@ const pageTitle = 'Blogs';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey in learning Astro</p>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <BlogPost url={`/posts/${post.slug}`} title={`${post.data.title}`} />
+  <h1>Code, Create & Evolve</h1>
+  <p>A quick glimpse of my journey and growth into <em>Web Developement</em></p>
+
+  {
+    allPosts
+      .map((post) => (
+        <BlogPost
+          url={`/posts/${post.slug}`}
+          title={`${post.data.title}`}
+          description={`${post.data.description}`}
+        />
       ))
-    }
-  </ul>
+      .reverse()
+  }
 </BaseLayout>
+
+<style>
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

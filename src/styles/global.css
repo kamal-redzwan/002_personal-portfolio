@@ -69,3 +69,10 @@ main {
   width: var(--content-width);
   margin: 0 auto;
 }
+
+.txt-link {
+  text-decoration: underline;
+  text-decoration-color: var(--txt-clr-dim);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3.5px;
+}

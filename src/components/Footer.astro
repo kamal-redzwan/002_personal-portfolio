@@ -5,15 +5,32 @@ const platform = 'github';
 const username = 'kamal-redzwan';
 ---
 
+<footer>
+  <div>
+    <p>Email: hey at this domain</p>
+  </div>
+  <div class='socials'>
+    <Social platform='Twitter' username='kamalredzwan' />
+    <Social platform='Github' username='kamal-redzwan' />
+  </div>
+</footer>
+
 <style>
   footer {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 1rem;
+
+    width: 100%;
+    height: 60px;
+  }
+
+  p {
+    color: var(--txt-clr-dim);
   }
 </style>
-
-<footer>
-  <Social platform='Twitter' username='kamalredzwan' />
-  <Social platform='Github' username='kamal-redzwan' />
-</footer>

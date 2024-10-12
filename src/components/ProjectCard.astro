@@ -5,7 +5,7 @@ const { projectNumber, projectName, description } = Astro.props;
 <div>
   <div>
     <a href='#'>
-      <h3>{projectNumber}</h3>
+      <h3 class='txt-link'>{projectNumber}</h3>
     </a>
     <h4>{projectName}</h4>
     <p>{description}</p>
@@ -22,10 +22,6 @@ const { projectNumber, projectName, description } = Astro.props;
     font-family: 'Space Mono', monospace;
     color: var(--txt-clr);
     font-size: 1rem;
-    text-decoration: underline;
-    text-decoration-color: var(--txt-clr-dim);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3.5px;
   }
 
   h4 {

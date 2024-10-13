@@ -53,21 +53,24 @@ h6 {
 }
 
 body {
-  min-height: 100vh;
   font-family: 'Pretendard Std Variable', 'Pretendard Std', Pretendard,
     -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue',
     'Segoe UI', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
   background: var(--bg);
   color: var(--txt-clr);
-  max-width: var(--page-width);
+  max-width: 100%;
   margin: 0 auto;
   padding-top: var(--page-padding-top);
+  position: relative;
+  min-height: 100vh;
 }
 
 main {
   width: var(--content-width);
+  min-height: max-content;
   margin: 0 auto;
+  padding-bottom: 60px;
 }
 
 .txt-link {

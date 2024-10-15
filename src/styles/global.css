@@ -5,9 +5,9 @@
   --bg: #1a1a1a;
   --txt-clr: #f2f2f2;
   --txt-clr-dim: #505050;
-  --page-width: 67rem;
-  --page-padding-top: 6rem;
   --hover-clr: #f2f2f299;
+  --page-padding-top: 6rem;
+  --page-width: 67rem;
   --content-width: 640px;
 }
 
@@ -50,6 +50,13 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+p,
+h1,
+h2,
+h3 {
+  font-size: 1rem;
 }
 
 body {

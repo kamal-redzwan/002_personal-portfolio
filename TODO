@@ -1,4 +1,6 @@
 - [x] Add name to AboutMeSection.astro
+- [x] Add homepage redirect to Logo.astro
+- [] Categorize components folder
 - [] Responsive Design
   - [] Desktop
   - [] Tablet
@@ -7,7 +9,5 @@
   - [] Stuff about Astro
   - [] Git usages
   - [] What I learn from WebDev-ing
-- [] Add homepage redirect to logo
 - [] Add darkmode
-- [] Categorize components folder
 - [] Add small animations to hover states

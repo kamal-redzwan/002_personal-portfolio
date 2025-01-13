@@ -3,9 +3,6 @@ title: 'The Reason Why I Got Into Tech'
 pubDate: 2024-10-13
 description: 'What spark my passion into technology'
 author: 'Kamal Redzwan'
-image:
-  url: 'https://docs.astro.build/assets/rose.webp'
-  alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ['astro', 'blogging', 'learning in public']
 ---
 

@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
   <a class='backBtn txt-link' href='javascript:history.back()'>Go Back</a>
   <div class='titleWithDate'>
     <h1 class='title'>{frontmatter.title}</h1>
-    <p class='pubDate'>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p class='pubDate'>{new Date(frontmatter.pubDate).toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
   </div>
 
   <p class='description' transition:animate={fade({ duration: '1s' })}>
@@ -29,7 +29,7 @@ const { frontmatter } = Astro.props;
   h1,
   h2,
   h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .backBtn {
@@ -44,7 +44,7 @@ const { frontmatter } = Astro.props;
   .titleWithDate {
     display: flex;
     gap: 1rem;
-    align-items: center;
+    align-items: baseline;
   }
 
   .pubDate {

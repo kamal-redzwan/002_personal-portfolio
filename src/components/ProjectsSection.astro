@@ -32,8 +32,20 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   div {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr
     column-gap: 2.5rem;
     row-gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    div {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>

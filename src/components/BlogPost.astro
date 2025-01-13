@@ -1,12 +1,15 @@
 ---
-const { title, url, description } = Astro.props;
+const { title, url, description, pubDate } = Astro.props;
 ---
 
-<div>
-  <a href={url}>
-    <h3 class='txt-link'>{title}</h3>
-  </a>
-  <p>
+<div class="blog-post">
+  <div class="title-date">
+    <a href={url}>
+      <h3 class='txt-link'>{title}</h3>
+    </a>
+    <p class="date">{pubDate}</p>
+  </div>
+  <p class="description">
     {description}
   </p>
 </div>
@@ -17,7 +20,13 @@ const { title, url, description } = Astro.props;
     text-decoration: none;
   }
 
-  div {
+  .title-date {
+    display: flex;
+    gap: .5rem;
+    align-items: baseline;
+  }
+
+  .blog-post {
     margin-top: 1rem;
   }
 
@@ -26,7 +35,18 @@ const { title, url, description } = Astro.props;
     font-size: 1rem;
   }
 
-  p {
+  .date {
+    color: var(--txt-clr-dim);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .date {
+      display: none;
+    }
+  }
+
+  .description {
     margin-top: 0.5rem;
     opacity: 60%;
   }

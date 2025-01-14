@@ -3,7 +3,7 @@ title: 'The "Aha!" Moment: When It All Clicked'
 pubDate: 2025-01-13
 description: 'A personal reflection on the pivotal moment when coding clicked for me'
 author: 'Kamal Redzwan'
-tags: ['astro', 'blogging', 'learning in public']
+tags: ['blogging', 'learning in public']
 ---
 
 You know that moment when everything just... makes sense? Like when you've been staring at a puzzle for hours, and suddenly you see exactly how all the pieces fit together? Well, that happened to me with code, and it's still one of my favorite memories as a developer.

@@ -1,12 +1,10 @@
 ---
-title: 'Learning Approaches That Worked (And Those That Didn't)'
+title: 'Self-Learning Approaches That Worked'
 pubDate: 2025-01-14
-description: 'An honest reflection on what actually works (and what doesn't) when learning to code through self-study, documentation, and video tutorials.'
+description: 'An honest reflection on what actually works when learning to code through self-study, documentation, and video tutorials'
 author: 'Kamal Redzwan'
 tags: ['blogging', 'learning in public']
 ---
-
-# Learning Approaches That Worked (And Those That Didn't)
 
 Let me tell you a story about my messy, wonderful journey of learning to code. Trust me, it wasn't the straight path I imagined it would be – there were plenty of late-night debugging sessions fueled by too much coffee and moments of both triumph and total confusion.
 

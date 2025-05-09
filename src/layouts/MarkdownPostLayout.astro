@@ -8,7 +8,16 @@ const { frontmatter } = Astro.props;
   <a class='backBtn txt-link' href='javascript:history.back()'>Go Back</a>
   <div class='titleWithDate'>
     <h1 class='title'>{frontmatter.title}</h1>
-    <p class='pubDate'>{new Date(frontmatter.pubDate).toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
+    <p class='pubDate'>
+      {
+        new Date(frontmatter.pubDate).toLocaleDateString('en-GB', {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })
+      }
+    </p>
   </div>
 
   <p class='description' transition:animate={fade({ duration: '1s' })}>

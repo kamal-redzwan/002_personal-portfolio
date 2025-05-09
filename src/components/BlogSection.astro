@@ -2,7 +2,7 @@
 import BlogPost from './BlogPost.astro';
 
 import { getCollection } from 'astro:content';
-const allPosts = await getCollection('posts');
+const allPosts = await getCollection('postsCollection');
 
 // Get the latest 3 post
 const MAX_POST = -3;
@@ -15,7 +15,7 @@ const MAX_POST = -3;
       .slice(MAX_POST)
       .map((post) => (
         <BlogPost
-          url={`/posts/${post.slug}`}
+          url={`/posts/${post.id}`}
           title={`${post.data.title}`}
           description={`${post.data.description}`}
           pubDate={`${post.data.pubDate.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}`}

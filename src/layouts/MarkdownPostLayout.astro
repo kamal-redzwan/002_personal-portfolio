@@ -5,7 +5,13 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <a class='backBtn txt-link' href='javascript:history.back()'>Go Back</a>
+  <a
+    class='backBtn txt-link'
+    href='javascript:void(0)'
+    onclick='if (history.length > 1) { history.back(); } else { window.close(); }'
+  >
+    Go Back
+  </a>
   <div class='titleWithDate'>
     <h1 class='title'>{frontmatter.title}</h1>
     <p class='pubDate'>

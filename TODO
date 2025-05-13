@@ -1,13 +1,15 @@
 - [x] Add name to AboutMeSection.astro
 - [x] Add homepage redirect to Logo.astro
 - [] Categorize components folder
-- [] Responsive Design
-  - [] Desktop
-  - [] Tablet
-  - [] Mobile
+- [x] Responsive Design
+  - [x] Desktop
+  - [x] Tablet
+  - [x] Mobile
 - [] Add more blogs
   - [] Stuff about Astro
   - [] Git usages
   - [] What I learn from WebDev-ing
 - [] Add darkmode
 - [] Add small animations to hover states
+- [] Filter Blog Post by date on BlogSection & Blog Page
+- [] Use data folder for AboutMe data, Projects data & Social data

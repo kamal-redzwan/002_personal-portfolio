@@ -11,5 +11,5 @@
   - [] What I learn from WebDev-ing
 - [] Add darkmode
 - [] Add small animations to hover states
-- [] Sort Blog Post by date on BlogSection & Blog Page
+- [x] Sort Blog Post by date on BlogSection & Blog Page
 - [x] Use data folder for AboutMe data, Projects data & Social data

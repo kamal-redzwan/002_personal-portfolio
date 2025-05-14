@@ -4,15 +4,20 @@ import BlogPost from './BlogPost.astro';
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection('postsCollection');
 
-// Get the latest 3 post
-const MAX_POST = -3;
+// Sort posts by date (newest first)
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// Get the latest 3 posts
+const latestPosts = sortedPosts.slice(0, 3);
 ---
 
 <section>
   <h2>Latest Blogs</h2>
   {
     allPosts
-      .slice(MAX_POST)
+      .slice(latestPosts)
       .map((post) => (
         <BlogPost
           url={`/posts/${post.id}`}
@@ -21,7 +26,6 @@ const MAX_POST = -3;
           pubDate={`${post.data.pubDate.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}`}
         />
       ))
-      .reverse()
   }
   <p><a class='txt-link' href='/blog'>Read More</a></p>
 </section>

@@ -1,8 +1,6 @@
 ---
 import Social from './Social.astro';
-
-const platform = 'github';
-const username = 'kamal-redzwan';
+import socialData from '../data/socials.json';
 ---
 
 <footer>
@@ -10,8 +8,11 @@ const username = 'kamal-redzwan';
     <p>Email: hey at this domain</p>
   </div>
   <div class='socials'>
-    <Social platform='Twitter' username='kamalredzwan' />
-    <Social platform={platform} username={username} />
+    {
+      socialData.map((data) => {
+        return <Social platform={data.platform} username={data.userName} />;
+      })
+    }
   </div>
 </footer>
 

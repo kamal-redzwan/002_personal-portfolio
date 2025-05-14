@@ -3,7 +3,7 @@ const { platform, username } = Astro.props;
 ---
 
 <a class='txt-link' href={`https://www.${platform}.com/${username}`}
-  >{platform}</a
+  >{platform.charAt(0).toUpperCase() + platform.slice(1)}</a
 >
 
 <style>

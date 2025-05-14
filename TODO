@@ -12,4 +12,4 @@
 - [] Add darkmode
 - [] Add small animations to hover states
 - [] Sort Blog Post by date on BlogSection & Blog Page
-- [] Use data folder for AboutMe data, Projects data & Social data
+- [x] Use data folder for AboutMe data, Projects data & Social data

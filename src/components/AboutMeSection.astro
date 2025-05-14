@@ -1,9 +1,12 @@
-<h1>Kamal Redzwan</h1>
+---
+import aboutMeData from '../data/aboutme.json';
+console.log(aboutMeData);
+---
+
+<h1>{aboutMeData.fullname}</h1>
 
 <p>
-  Full-stack virtuoso architecting scalable web solutions in the heart of Kuala
-  Lumpur, Malaysia. Passionate about weaving digital enchantment into every
-  pixel.
+  {aboutMeData.description}
 </p>
 
 <style>

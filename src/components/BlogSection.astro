@@ -1,48 +1,15 @@
 ---
-import BlogPost from './BlogPost.astro';
-
-import { getCollection } from 'astro:content';
-const allPosts = await getCollection('postsCollection');
-
-// Sort posts by date (newest first)
-const sortedPosts = allPosts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-// Get the latest 3 posts
-const latestPosts = sortedPosts.slice(0, 3);
+import BlogPostList from './BlogPostList.astro';
 ---
 
 <section>
   <h2>Latest Blogs</h2>
-  {
-    allPosts
-      .slice(latestPosts)
-      .map((post) => (
-        <BlogPost
-          url={`/posts/${post.id}`}
-          title={`${post.data.title}`}
-          description={`${post.data.description}`}
-          pubDate={`${post.data.pubDate.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}`}
-        />
-      ))
-  }
-  <p><a class='txt-link' href='/blog'>Read More</a></p>
+  <BlogPostList limit={3} showReadMore={true} />
 </section>
 
 <style>
   h2 {
     font-size: 1.6rem;
     padding-top: 3rem;
-  }
-
-  p {
-    margin-top: 1.5rem;
-  }
-
-  a {
-    margin-top: 1.5rem;
-    font-weight: bold;
-    color: var(--txt-clr);
   }
 </style>

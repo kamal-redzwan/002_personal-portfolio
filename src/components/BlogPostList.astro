@@ -1,0 +1,57 @@
+---
+import BlogPost from './BlogPost.astro';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  limit?: number;
+  showReadMore?: boolean;
+}
+
+const { limit, showReadMore = false } = Astro.props;
+
+// Fetch and sort posts
+const allPosts = await getCollection('postsCollection');
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// If limit is provided, slice the array
+const postsToShow = limit ? sortedPosts.slice(0, limit) : sortedPosts;
+---
+
+{
+  postsToShow.map((post) => (
+    <BlogPost
+      url={`/posts/${post.id}`}
+      title={`${post.data.title}`}
+      description={`${post.data.description}`}
+      pubDate={`${post.data.pubDate.toLocaleDateString('en-US', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      })}`}
+    />
+  ))
+}
+
+{
+  showReadMore && (
+    <p>
+      <a class='txt-link' href='/blog'>
+        Read More
+      </a>
+    </p>
+  )
+}
+
+<style>
+  p {
+    margin-top: 1.5rem;
+  }
+
+  a {
+    font-weight: bold;
+    color: var(--txt-clr);
+  }
+</style>

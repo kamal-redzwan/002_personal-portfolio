@@ -20,12 +20,12 @@ const postsToShow = limit ? sortedPosts.slice(0, limit) : sortedPosts;
 ---
 
 {
-  postsToShow.map((post) => (
+  postsToShow.map((blog) => (
     <BlogPost
-      url={`/posts/${post.id}`}
-      title={`${post.data.title}`}
-      description={`${post.data.description}`}
-      pubDate={`${post.data.pubDate.toLocaleDateString('en-US', {
+      url={`/blog/${blog.id}`}
+      title={`${blog.data.title}`}
+      description={`${blog.data.description}`}
+      pubDate={`${blog.data.pubDate.toLocaleDateString('en-US', {
         weekday: 'long',
         day: 'numeric',
         month: 'long',

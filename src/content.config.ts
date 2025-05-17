@@ -4,7 +4,7 @@ import { defineCollection, z } from 'astro:content';
 
 // Define a `type` and `schema` for each collection
 const postsCollection = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/posts' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blogs' }),
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
